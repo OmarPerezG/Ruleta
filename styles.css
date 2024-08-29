@@ -1,0 +1,100 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('fondometal.jpg'); /* Añade la imagen de fondo */
+    background-size: cover;             /* Ajusta la imagen para que cubra toda la pantalla */
+    background-position: center;        /* Centra la imagen de fondo */
+    background-repeat: no-repeat;       /* Evita que la imagen se repita */
+    background-attachment: fixed;       /* Hace que la imagen se quede fija al hacer scroll */
+}
+
+#flecha {
+    position: absolute;
+    top: 300px; /* Ajusta para centrar la flecha arriba del canvas */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    color: #ffffff;
+}
+
+#ruleta {
+    position: relative;
+    margin-bottom: 100px;
+}
+
+#canvas {
+    border: 2px solid #333;
+    border-radius: 100%;
+}
+
+#girar {
+    position: absolute; /* Asegúrate de que el botón esté en la misma capa que la ruleta */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: conic-gradient(
+        red 0% 16.67%, 
+        black 16.67% 33.33%, 
+        red 33.33% 50%, 
+        black 50% 66.67%, 
+        red 66.67% 83.33%, 
+        black 83.33% 100%
+    );
+    color: white;
+    font-size: 18px; /* Tamaño de la fuente */
+    text-align: center; /* Centra el texto horizontalmente */
+    line-height: 60px; /* Alinea verticalmente el texto */
+    border: none;
+    cursor: pointer;
+    display: flex; /* Activa Flexbox para centrar el contenido */
+    align-items: center; /* Centra el texto verticalmente */
+    justify-content: center; /* Centra el texto horizontalmente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añade una sombra para mejor apariencia */
+    background-color: transparent; /* Hacemos transparente para usar el conic-gradient */
+}
+
+#girar:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Cambia el color al pasar el ratón */
+}
+
+#botones {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+button {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Distribuye las imágenes en las esquinas */
+    padding: 20px;
+}
+
+#logo-izquierda {
+    height: 150px; /* Ajusta el tamaño de la imagen izquierda */
+}
+
+#logo-derecha {
+    height: 150px; /* Ajusta el tamaño de la imagen derecha */
+}
